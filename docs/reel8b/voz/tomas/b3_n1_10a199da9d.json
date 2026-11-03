@@ -1,0 +1,7 @@
+{
+ "texto": "[soft] Ahí, primero, corto su pregunta en pedacitos. Y la leo entera, de una vez. Después elijo una palabra. La agrego. Vuelvo a leer todo. Y elijo la siguiente.",
+ "modelo": "s2.1-pro-free",
+ "temperature": 0.5,
+ "top_p": 0.7,
+ "speed": 1.0
+}

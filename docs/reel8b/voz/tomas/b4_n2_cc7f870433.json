@@ -1,0 +1,7 @@
+{
+ "texto": "[soft] Cada pregunta gasta la electricidad de un horno prendido un segundo. Y una gotita de agua, para que las computadoras no se calienten. La respuesta hace el viaje de vuelta. Y aparece en su pantalla.",
+ "modelo": "s2.1-pro-free",
+ "temperature": 0.5,
+ "top_p": 0.7,
+ "speed": 1.0
+}

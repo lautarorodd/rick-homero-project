@@ -1,0 +1,7 @@
+{
+ "texto": "[soft] Yo, chatyipití, no estoy en tu celular. Estoy a miles de kilómetros. Mira. Son las once de la noche. Sófi me escribe: \"¿Qué le cocino a mi novio, que es vegetariano?\" Y aprieta enviar.",
+ "modelo": "s2.1-pro-free",
+ "temperature": 0.5,
+ "top_p": 0.7,
+ "speed": 1.0
+}

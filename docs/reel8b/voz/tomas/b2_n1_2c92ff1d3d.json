@@ -1,0 +1,7 @@
+{
+ "texto": "[soft] Su pregunta sale del celular convertida en luz. Viaja por cables, a veces por el fondo del mar. Hasta un edificio enorme, lleno de computadoras que nunca se apagan.",
+ "modelo": "s2.1-pro-free",
+ "temperature": 0.5,
+ "top_p": 0.7,
+ "speed": 1.0
+}

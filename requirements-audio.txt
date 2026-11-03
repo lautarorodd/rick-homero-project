@@ -1,0 +1,6 @@
+# Entorno opcional para generar y alinear voces; instalar torch y torchaudio compatibles por separado.
+numpy
+scipy
+soundfile
+pyloudnorm
+noisereduce
