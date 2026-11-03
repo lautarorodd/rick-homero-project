@@ -9,6 +9,7 @@ La clave se lee de .env (FISH_AUDIO_API_KEY) y nunca se imprime. Cada toma se ca
 import argparse
 import hashlib
 import json
+import os
 import sys
 import urllib.error
 import urllib.request
@@ -21,11 +22,16 @@ SPOKEN = {"ChatGPT": "chatyipití", "Sofi": "Sófi", "video": "vidéo"}  # acent
 
 
 def api_key():
-    for line in (ROOT / ".env").read_text(encoding="utf-8-sig").splitlines():
-        k, _, v = line.strip().partition("=")
-        if k.strip() == "FISH_AUDIO_API_KEY":
-            return v.strip().strip('"').strip("'")
-    sys.exit("Falta FISH_AUDIO_API_KEY en .env")
+    # Primero la variable de entorno (sesiones en la nube); si no está, el .env local (nunca se sube a Git).
+    if os.environ.get("FISH_AUDIO_API_KEY"):
+        return os.environ["FISH_AUDIO_API_KEY"].strip()
+    env = ROOT / ".env"
+    if env.exists():
+        for line in env.read_text(encoding="utf-8-sig").splitlines():
+            k, _, v = line.strip().partition("=")
+            if k.strip() == "FISH_AUDIO_API_KEY":
+                return v.strip().strip('"').strip("'")
+    sys.exit("Falta FISH_AUDIO_API_KEY (variable de entorno o .env)")
 
 
 def tts(text, model, temperature, top_p, speed=1.0):
